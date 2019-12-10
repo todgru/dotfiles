@@ -29,3 +29,6 @@ export PS1="$FRED[\w$FGRN \$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/*
 # directory listing
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# serving html pages and javascript
+export serve='/usr/bin/python -m SimpleHTTPServer 8000'
