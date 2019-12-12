@@ -6,6 +6,7 @@
 
 ```
 echo '
+# added by todgru dotfiles
 if [[ -s "${ZDOTDIR:-$HOME}/dotfiles/source-me.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/dotfiles/source-me.zsh"
 fi
