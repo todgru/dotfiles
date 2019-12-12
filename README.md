@@ -2,7 +2,7 @@
 
 * `.tmux.conf ` is available, but I don't use tmux much anymore. I like this conf, though. :)
 
-#### execute this bit of script for setup 
+#### execute this bit of script for setup
 
 ```
 echo '
@@ -14,3 +14,6 @@ ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/vim $HOME/.vim
 
 ```
+
+#### vim & gpg
+Using gpg with vim - setup and background [in this gist](https://gist.github.com/todgru/4652807).
