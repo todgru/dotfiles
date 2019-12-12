@@ -1,11 +1,16 @@
-# todgru's slim dotfiles
+# todgru's slimer yet dotfiles
 
-* `echo 'source $HOME/dotfiles/source-me.bash' >> $HOME/.bashrc`
-* `ln -s $HOME/dotfiles/tmux.conf $HOME/.tmux.conf `
-* `ln -s $HOME/dotfiles/vimrc $HOME/.vimrc `
-* `ln -s $HOME/dotfiles/vim $HOME/.vim `
+* `.tmux.conf ` is available, but I don't use tmux much anymore. I like this conf, though. :)
 
+#### execute this bit of script for setup 
 
-**TODO**
+```
+echo '
+if [[ -s "${ZDOTDIR:-$HOME}/dotfiles/source-me.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/dotfiles/source-me.zsh"
+fi
+' >> ${ZDOTDIR:-$HOME}/.zshrc
+ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
+ln -s $HOME/dotfiles/vim $HOME/.vim
 
-* ensure vim pluggins are correct
+```
