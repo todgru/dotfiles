@@ -1,0 +1,21 @@
+[user]
+	name = todgru
+	email = todgru@gmail.com
+[alias]
+  co = checkout
+  cob = checkout -b $USER/$1
+  br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+  pom = pull origin master
+  recent-branches = for-each-ref --sort=-committerdate --count=10 --format='%(refname:short)' refs/heads/
+  rb = for-each-ref --sort=-committerdate --count=10 --format='%(refname:short)' refs/heads/
+[color]
+  ui = auto
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
