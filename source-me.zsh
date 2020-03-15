@@ -13,6 +13,9 @@ alias gs='git status'
 export GPG_TTY=`tty`
 alias vd='vim -n -i "NONE" "+set filetype=yaml"'
 
+# Rclone
+export RCLONE_CONFIG=/Volumes/Keybase/private/todgru/config/rclone/rclone.conf
+
 # grep
 export GREP_OPTIONS='--color=auto'
 
