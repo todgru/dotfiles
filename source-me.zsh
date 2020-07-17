@@ -36,3 +36,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Application env vars
 [ -s "$HOME/dotfiles/private.zsh" ] && \. "$HOME/dotfiles/private.zsh"
+
+alias commit-types='cat ~/dotfiles/commit-types.txt'
+alias ct='cat ~/dotfiles/commit-types.txt'
