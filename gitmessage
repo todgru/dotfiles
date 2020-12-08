@@ -1,0 +1,57 @@
+<area>: <description>
+#-------------------------------------------------
+# title is a short description, less than 50 chars
+# Do not exceed above line in commit txt length
+#-------------------------------------------------
+# This is the empty space to separate the title from the body
+
+#-----------------------------------------------------------------------
+<summary>
+#-----------------------------------------------------------------------
+# <summary> is the description of what and why, not how.
+#  * Link to issue, if needed.
+#  * Wrap summary text at the end of the above line, do not exceed 
+#    line length
+# [[summary-section/description]]
+# It's customary to start the remainder of the first line after "area: "
+# with a lower-case letter. E.g. "doc: clarify...", not "doc:
+# Clarify...", or "githooks.txt: improve...", not "githooks.txt:
+# Improve...".
+# 
+# [[meaningful-message]]
+# The body should provide a meaningful commit message, which:
+# 
+#   . explains the problem the change tries to solve, i.e. what is wrong
+#     with the current code without the change.
+#   
+#   . justifies the way the change solves the problem, i.e. why the
+#     result with the change is better.
+#   
+#   . alternate solutions considered but discarded, if any.
+# 
+# [[imperative-mood]]
+# Describe your changes in imperative mood, e.g. "make xyzzy do frotz"
+# instead of "[This patch] makes xyzzy do frotz" or "[I] changed xyzzy
+# to do frotz", as if you are giving orders to the codebase to change
+# its behavior.  Try to make sure your explanation can be understood
+# without external resources. Instead of giving a URL to a mailing list
+# archive, summarize the relevant points of the discussion.
+#-----------------------------------------------------------------------
+# * feat (new feature)
+# * fix (bug fix)
+# * docs (changes to documentation)
+# * style (formatting, missing semi colons, etc; no code change)
+# * refactor (refactoring production code)
+# * data -  only effects the data directly, ie: add to or remove from
+# the seed file
+# * tool - does not directly effect site users, developer or testing
+# space
+# * test (adding missing tests, refactoring tests; no production code
+# change)
+# * chore (updating grunt tasks etc; no production code change)
+# * wip - work in progress. USE SPARINGLY
+#-----------------------------------------------------------------------
+# Additional commit notes:
+# https://chris.beams.io/posts/git-commit/
+# https://github.com/git/git/blob/master/Documentation/SubmittingPatches#L104-L142
+#-----------------------------------------------------------------------
