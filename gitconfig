@@ -20,4 +20,4 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 [commit]
-	template = /Users/todd.gruener/dotfiles/gitmessage
+	template = /Users/todd.gruener/dotfiles/git-commit-template
