@@ -51,7 +51,3 @@
 # * chore (updating grunt tasks etc; no production code change)
 # * wip - work in progress. USE SPARINGLY
 #-----------------------------------------------------------------------
-# Additional commit notes:
-# github.com/git/git/blob/master/Documentation/SubmittingPatches#L104-L142
-# chris.beams.io/posts/git-commit/
-#-----------------------------------------------------------------------
