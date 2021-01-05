@@ -9,7 +9,7 @@
   recent-branches = for-each-ref --sort=-committerdate --count=10 --format='%(refname:short)' refs/heads/
   rb = for-each-ref --sort=-committerdate --count=10 --format='%(refname:short)' refs/heads/
 [color]
-  ui = auto
+	ui = true
 [color "status"]
   added = green
   changed = yellow
@@ -21,3 +21,17 @@
   process = git-lfs filter-process
 [commit]
 	template = /Users/todd.gruener/dotfiles/git-commit-template
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

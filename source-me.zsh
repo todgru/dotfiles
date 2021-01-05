@@ -8,6 +8,7 @@ alias gco='git checkout'
 alias gcom='git checkout master'
 alias gitlog="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=local --max-count=50 --no-merges"
 alias gs='git status'
+export PATH="$HOME/dotfiles/diff-so-fancy:$PATH"
 
 # GPG
 export GPG_TTY=`tty`
