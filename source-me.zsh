@@ -40,3 +40,7 @@ export NVM_DIR="$HOME/.nvm"
 
 alias commit-types='cat ~/dotfiles/commit-types.txt'
 alias ct='cat ~/dotfiles/commit-types.txt'
+
+# TODO - include is default zsh, because iterm2 is funny
+# bindkey -v
+# bindkey '^R' history-incremental-search-backward
