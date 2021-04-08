@@ -52,3 +52,7 @@ max-cache-ttl 0
 - delete public and private key `gpg --delete-keys` and `gpg --delete-secret-keys`
 
 **Edited gpg install [from this gist](https://gist.github.com/todgru/4652807)**
+
+# Other Apps
+
+- [Clocker](https://github.com/n0shake/Clocker) OSx timezone menu bar utility `brew install --cask clocker`
