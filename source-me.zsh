@@ -49,4 +49,12 @@ alias ct='cat ~/dotfiles/commit-types.txt'
 # bindkey '^R' history-incremental-search-backward
 
 # Prompt
+#  %D     The date in yy-mm-dd format.
+#  %T     Current time of day, in 24-hour format.
+#  %t %@  Current time of day, in 12-hour, am/pm format.
+#  %*     Current time of day in 24-hour format, with seconds.
+#  %w     The date in day-dd format.
+#  %W     The date in mm/dd/yy format.
+#  %D{strftime-format}
+#  more info man zshmisc, grep "date and time"
 RPROMPT="[%D{%y/%m/%f}|%@]"
