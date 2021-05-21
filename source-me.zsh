@@ -30,6 +30,9 @@ export serve='/usr/bin/python -m SimpleHTTPServer 8000'
 # Postgresql
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
+# homebrew
+export PAN="/usr/local/Cellar:$PATH"
+
 # Node/nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -44,3 +47,6 @@ alias ct='cat ~/dotfiles/commit-types.txt'
 # TODO - include is default zsh, because iterm2 is funny
 # bindkey -v
 # bindkey '^R' history-incremental-search-backward
+
+# Prompt
+RPROMPT="[%D{%y/%m/%f}|%@]"
