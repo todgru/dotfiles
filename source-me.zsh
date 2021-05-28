@@ -22,7 +22,9 @@ export GREP_OPTIONS='--color=auto'
 
 # directory listing @TODO does this work in zsh?
 export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
+export LSCOLORS=gxfxcxdxbxegedabagacad
+export LS_COLORS="di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # serving html pages and javascript
 export serve='/usr/bin/python -m SimpleHTTPServer 8000'
