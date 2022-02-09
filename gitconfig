@@ -23,6 +23,7 @@
 	template = /Users/todd.gruener/dotfiles/git-commit-template
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /Users/todd.gruener/.gitignore
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
