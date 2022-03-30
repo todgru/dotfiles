@@ -20,10 +20,10 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 [commit]
-	template = /Users/todd.gruener/dotfiles/git-commit-template
+	template = ~/dotfiles/git-commit-template
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	excludesfile = /Users/todd.gruener/.gitignore
+	excludesfile = ~/.gitignore
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
