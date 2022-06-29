@@ -8,6 +8,8 @@ alias gco='git checkout'
 alias gcom='git checkout master'
 alias gitlog="git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=local --max-count=50 --no-merges"
 alias gs='git status'
+# kick ci! trigger ci build for branch that recently moved from "draft" to "ready for review".
+alias gkci='git commit --allow-empty -m "empty commit to trigger ci" && git push origin $(git branch --show-current)'
 export PATH="$HOME/dotfiles/diff-so-fancy:$PATH"
 
 # GPG
