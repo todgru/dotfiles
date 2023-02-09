@@ -18,6 +18,16 @@ ln -s $HOME/dotfiles/vim $HOME/.vim
 ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
 ```
 
+# zsh
+
+Install [Prezto](https://github.com/sorin-ionescu/prezto)
+
+```
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+```
+
+- copy `.zpreztorc` from old machine.
+
 # CLI helpers
 
 more good stuff [here](https://github.com/nath1as/.files)
@@ -56,3 +66,39 @@ max-cache-ttl 0
 # Other Apps
 
 - [Clocker](https://github.com/n0shake/Clocker) OSx timezone menu bar utility `brew install --cask clocker`
+- [UTC Clock](https://github.com/netik/UTCMenuClock)
+- [VS Code Editor](https://code.visualstudio.com/)
+  - on old machine, `code --list-extensions > installed-extensions.txt`
+  - copy `installed-extensions.txt` to new machine
+  - `cat installed-extensions.txt | xargs -L 1 code --install-extension`
+  - enable VIM plugin key repeat: `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false`
+- [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) NodeJS version manager.
+- Homebrew
+- [Hammerspoon](https://www.hammerspoon.org/) disable launching iTunes Music whenever the headphone buttons are acidentally pressed.
+  - copy [this lua script](./.hammerspoon/init.lua) to `~/.hammerspoon/init.lua`.
+- [Firefox]() bookmarks, [settings]() and [extensions]().
+- Tableplus
+- Cisco AnyConnect
+
+## Elasticsearch install on M1 Mac
+
+Working based on these [comments](https://github.com/elastic/elasticsearch/issues/91159).
+```sh
+>> brew install openjdk
+>> brew install elastic/tap/elasticsearch-full
+>> sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+>> /usr/libexec/java_home # display path to openJDK
+/opt/homebrew/Cellar/openjdk/19.0.2/libexec/openjdk.jdk/Contents/Home
+>> code /opt/homebrew/Cellar/elasticsearch-full/7.17.4/homebrew.mxcl.elasticsearch-full.plist
+# insert the following before the last closing <dict>
+#    <key>EnvironmentVariables</key>
+#    <dict>
+#      <key>ES_JAVA_HOME</key>
+#      <string>/opt/homebrew/Cellar/openjdk/19.0.2/libexec/openjdk.jdk/Contents/Home</string>
+#    </dict>
+>> echo "\nxpack.ml.enabled: false\n" >> /opt/homebrew/etc/elasticsearch/elasticsearch.yml
+>> echo "\nexport ES_JAVA_HOME=$(/usr/libexec/java_home)\n" >> ~/.zshrc
+
+# Test elasticserarch:
+>> elasticsearch
+```

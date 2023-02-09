@@ -49,8 +49,8 @@ alias commit-types='cat ~/dotfiles/commit-types.txt'
 alias ct='cat ~/dotfiles/commit-types.txt'
 
 # TODO - include is default zsh, because iterm2 is funny
-# bindkey -v
-# bindkey '^R' history-incremental-search-backward
+bindkey -v
+bindkey "^R" history-incremental-search-backward
 
 # Prompt
 #  %D     The date in yy-mm-dd format.
@@ -62,3 +62,7 @@ alias ct='cat ~/dotfiles/commit-types.txt'
 #  %D{strftime-format}
 #  more info man zshmisc, grep "date and time"
 RPROMPT="[%D{%y/%m/%f}|%@]"
+
+# see "Elasticsearch install on M1 Mac" in ./README.md
+export ES_JAVA_HOME=$(/usr/libexec/java_home)
+
