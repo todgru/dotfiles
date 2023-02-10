@@ -81,26 +81,5 @@ max-cache-ttl 0
 - Cisco AnyConnect
 - OS X: [Disable System Sound Effects](https://gist.github.com/todgru/0990ae2461dca9d6836fee7f43b3944f)
 - Exiftool: manage EXIF metadata, [download](https://exiftool.org/)
+- Elasticsearch install on M1 Mac, [instructions](https://gist.github.com/todgru/0ba097d63318313f12a52594217f8e2b)
 
-## Elasticsearch install on M1 Mac
-
-Working based on these [comments](https://github.com/elastic/elasticsearch/issues/91159).
-```sh
->> brew install openjdk
->> brew install elastic/tap/elasticsearch-full
->> sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
->> /usr/libexec/java_home # display path to openJDK
-/opt/homebrew/Cellar/openjdk/19.0.2/libexec/openjdk.jdk/Contents/Home
->> code /opt/homebrew/Cellar/elasticsearch-full/7.17.4/homebrew.mxcl.elasticsearch-full.plist
-# insert the following before the last closing <dict>
-#    <key>EnvironmentVariables</key>
-#    <dict>
-#      <key>ES_JAVA_HOME</key>
-#      <string>/opt/homebrew/Cellar/openjdk/19.0.2/libexec/openjdk.jdk/Contents/Home</string>
-#    </dict>
->> echo "\nxpack.ml.enabled: false\n" >> /opt/homebrew/etc/elasticsearch/elasticsearch.yml
->> echo "\nexport ES_JAVA_HOME=$(/usr/libexec/java_home)\n" >> ~/.zshrc
-
-# Test elasticserarch:
->> elasticsearch
-```
