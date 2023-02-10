@@ -79,6 +79,7 @@ max-cache-ttl 0
 - [Firefox]() bookmarks, [settings]() and [extensions]().
 - Tableplus
 - Cisco AnyConnect
+- OS X: [Disable System Sound Effects](https://gist.github.com/todgru/osx-mac-disable-system-sound-effects.md)
 
 ## Elasticsearch install on M1 Mac
 
