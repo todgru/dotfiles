@@ -29,13 +29,13 @@ export LS_COLORS="di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # serving html pages and javascript
-export serve='/usr/bin/python -m SimpleHTTPServer 8000'
+alias serve='/usr/bin/python3 -m SimpleHTTPServer 8000'
 
 # Postgresql
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+
 
 # homebrew
-export PAN="/usr/local/Cellar:$PATH"
+
 
 # Node/nvm
 export NVM_DIR="$HOME/.nvm"
@@ -61,7 +61,8 @@ bindkey "^R" history-incremental-search-backward
 #  %W     The date in mm/dd/yy format.
 #  %D{strftime-format}
 #  more info man zshmisc, grep "date and time"
-RPROMPT="[%D{%y/%m/%f}|%@]"
+# Removing "right prompt" ie RPROMPT. A bit annoying when selecting shell text.
+# RPROMPT="[%D{%y/%m/%f}|%@]"
 
 # see "Elasticsearch install on M1 Mac" in ./README.md
 export ES_JAVA_HOME=$(/usr/libexec/java_home)
