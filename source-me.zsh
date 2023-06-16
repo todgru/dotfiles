@@ -67,3 +67,10 @@ bindkey "^R" history-incremental-search-backward
 # see "Elasticsearch install on M1 Mac" in ./README.md
 export ES_JAVA_HOME=$(/usr/libexec/java_home)
 
+# unset zprezto destructive git reset aliases
+unalias gir
+unalias gcR
+unalias giR
+unalias gir
+unalias gwR
+unalias gwr
