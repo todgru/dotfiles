@@ -71,6 +71,6 @@ export ES_JAVA_HOME=$(/usr/libexec/java_home)
 unalias gir
 unalias gcR
 unalias giR
-unalias gir
 unalias gwR
 unalias gwr
+

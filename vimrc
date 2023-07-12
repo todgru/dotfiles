@@ -76,3 +76,5 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 """""""""
 let g:GPGPreferArmor = 1
 au BufRead,BufNewFile *.gpg set filetype=yaml
+
+nnoremap <space>t o<C-r>=strftime("%F %H:%M ")<cr>
